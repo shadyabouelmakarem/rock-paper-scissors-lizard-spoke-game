@@ -1,0 +1,36 @@
+@import "assets/styles/variables";
+
+@font-face {
+  font-family: "BarlowSemiCondensed";
+  src: local("BarlowSemiCondensed"),
+    url(./assets/fonts/Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf)
+      format("truetype");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-image: radial-gradient(at 50% 10%, $color1, $color2);
+
+  &,
+  button {
+    font-family: "BarlowSemiCondensed";
+    text-transform: uppercase;
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+  }
+}

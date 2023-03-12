@@ -1,0 +1,22 @@
+<div class="pick">
+  <app-choice
+    [choice]="userPick"
+    [ngClass]="{ win: winState === 1 }"
+  ></app-choice>
+  <div class="pick__label">you picked</div>
+</div>
+<div class="pick">
+  <app-choice
+    [choice]="computerPick"
+    *ngIf="computerPick"
+    [ngClass]="{ win: winState === -1 }"
+  ></app-choice>
+  <div class="choice-placeholder" *ngIf="!computerPick"></div>
+  <div class="pick__label">the house picked</div>
+</div>
+<div class="result" *ngIf="winState !== undefined">
+  <div class="label">
+    {{ winState === 1 ? "you win" : winState === -1 ? "you lose" : "draw" }}
+  </div>
+  <button class="play-again" (click)="playAgain()">play again</button>
+</div>

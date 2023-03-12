@@ -1,0 +1,146 @@
+@import "../../assets/styles/variables";
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: vws(100);
+  height: vws(100);
+  border-radius: 50%;
+  background: $white;
+  -webkit-box-shadow: inset 0px vws(10) 0 vws(-5) darken($white, 15%);
+  -moz-box-shadow: inset 0px vws(10) 0 vws(-5) darken($white, 15%);
+  box-shadow: inset 0px vws(10) 0 vws(-5) darken($white, 15%);
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: vws(100);
+    height: vws(100);
+    border-radius: 50%;
+  }
+
+  &.scissors {
+    border: vws(15) solid $color7;
+
+    &:after {
+      -webkit-box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color6, 5%);
+      -moz-box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color6, 5%);
+      box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color6, 5%);
+    }
+  }
+
+  &.spock {
+    border: vws(15) solid $color15;
+
+    &:after {
+      -webkit-box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color14, 5%);
+      -moz-box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color14, 5%);
+      box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color14, 5%);
+    }
+  }
+
+  &.paper {
+    border: vws(15) solid $color9;
+
+    &:after {
+      -webkit-box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color8, 5%);
+      -moz-box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color8, 5%);
+      box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color8, 5%);
+    }
+  }
+
+  &.lizard {
+    border: vws(15) solid $color13;
+
+    &:after {
+      -webkit-box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color12, 5%);
+      -moz-box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color12, 5%);
+      box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color12, 5%);
+    }
+  }
+
+  &.rock {
+    border: vws(15) solid $color11;
+
+    &:after {
+      -webkit-box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color10, 5%);
+      -moz-box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color10, 5%);
+      box-shadow: inset 0px vws(-10) 0 vws(-5) darken($color10, 5%);
+    }
+  }
+
+  img {
+    width: vws(40);
+    height: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  :host {
+    width: vwl(100);
+    height: vwl(100);
+    -webkit-box-shadow: inset 0px vwl(10) 0 vwl(-5) darken($white, 15%);
+    -moz-box-shadow: inset 0px vwl(10) 0 vwl(-5) darken($white, 15%);
+    box-shadow: inset 0px vwl(10) 0 vwl(-5) darken($white, 15%);
+
+    &:after {
+      width: vwl(100);
+      height: vwl(100);
+    }
+
+    &.scissors {
+      border: vwl(15) solid $color6;
+
+      &:after {
+        -webkit-box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color6, 5%);
+        -moz-box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color6, 5%);
+        box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color6, 5%);
+      }
+    }
+
+    &.spock {
+      border: vwl(15) solid $color14;
+
+      &:after {
+        -webkit-box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color14, 5%);
+        -moz-box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color14, 5%);
+        box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color14, 5%);
+      }
+    }
+
+    &.paper {
+      border: vwl(15) solid $color8;
+
+      &:after {
+        -webkit-box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color8, 5%);
+        -moz-box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color8, 5%);
+        box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color8, 5%);
+      }
+    }
+
+    &.lizard {
+      border: vwl(15) solid $color12;
+
+      &:after {
+        -webkit-box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color12, 5%);
+        -moz-box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color12, 5%);
+        box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color12, 5%);
+      }
+    }
+
+    &.rock {
+      border: vwl(15) solid $color10;
+
+      &:after {
+        -webkit-box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color10, 5%);
+        -moz-box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color10, 5%);
+        box-shadow: inset 0px vwl(-10) 0 vwl(-5) darken($color10, 5%);
+      }
+    }
+
+    img {
+      width: vwl(30);
+    }
+  }
+}

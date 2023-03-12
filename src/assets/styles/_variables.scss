@@ -1,0 +1,25 @@
+$white: #ffffff;
+$black: #000000;
+$color1: hsl(214, 47%, 23%); // background gradient 1
+$color2: hsl(237, 49%, 15%); // background gradient 2
+$color3: hsl(229, 25%, 31%); // dark text
+$color4: hsl(229, 64%, 46%); // score text
+$color5: hsl(217, 16%, 45%); // header outline
+$color6: hsl(39, 89%, 49%); // scissors gradient 1
+$color7: hsl(40, 84%, 53%); // scissors gradient 2
+$color8: hsl(230, 89%, 62%); // paper gradient 1
+$color9: hsl(230, 89%, 65%); // paper gradient 2
+$color10: hsl(349, 71%, 52%); // rock gradient 1
+$color11: hsl(349, 70%, 56%); // rock gradient 2
+$color12: hsl(261, 73%, 60%); // lizard gradient 1
+$color13: hsl(261, 72%, 63%); // lizard gradient 2
+$color14: hsl(189, 59%, 53%); // cyan gradient 1
+$color15: hsl(189, 58%, 57%); // cyan gradient 2
+
+@function vws($pxInDeisgn) {
+  @return $pxInDeisgn / 375 * 100vw;
+}
+
+@function vwl($pxInDeisgn) {
+  @return $pxInDeisgn / 1366 * 100vw;
+}

@@ -1,0 +1,71 @@
+@import "../../assets/styles/variables";
+
+:host {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: vws(10);
+  border: vws(3) solid $color5;
+  border-radius: vws(5);
+  font-weight: 700;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    list-style: none;
+    padding-left: vws(10);
+    font-size: vws(12);
+
+    li {
+      line-height: 1;
+    }
+  }
+
+  .score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 vws(20);
+    background: $white;
+    border-radius: vws(5);
+
+    &__header {
+      color: $color4;
+      font-size: vws(12);
+    }
+
+    &__value {
+      font-size: vws(30);
+      color: $color3;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  :host {
+    width: vwl(700);
+    padding: vwl(15);
+    border: vwl(3) solid $color5;
+    border-radius: vwl(15);
+
+    ul {
+      padding-left: vwl(10);
+      font-size: vwl(20);
+    }
+
+    .score {
+      padding: 0 vwl(30);
+      border-radius: vwl(5);
+
+      &__header {
+        font-size: vwl(20);
+      }
+
+      &__value {
+        font-size: vwl(60);
+      }
+    }
+  }
+}

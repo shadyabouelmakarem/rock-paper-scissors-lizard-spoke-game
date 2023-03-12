@@ -1,0 +1,7 @@
+<div class="choices-container">
+  <app-choice
+    *ngFor="let choice of choices"
+    [choice]="choice"
+    (click)="pick(choice)"
+  ></app-choice>
+</div>

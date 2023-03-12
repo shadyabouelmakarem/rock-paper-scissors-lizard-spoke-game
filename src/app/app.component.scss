@@ -1,0 +1,107 @@
+@import "../assets/styles/variables";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: vws(20);
+  height: 100%;
+  position: relative;
+
+  .rules-btn {
+    background-color: transparent;
+    border: vws(3) solid $color5;
+    border-radius: vws(8);
+    color: $white;
+    padding: vws(10) vws(35);
+    font-size: vws(20);
+  }
+
+  .rules-modal-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+
+    .rules-modal {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+
+      span {
+        color: $color3;
+        font-size: vws(35);
+        font-weight: 700;
+      }
+
+      img {
+        &:first-of-type {
+          width: calc(100% - #{vws(50)});
+          height: auto;
+        }
+
+        &:last-of-type {
+          cursor: pointer;
+          width: vws(20);
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  :host {
+    padding: vwl(40);
+
+    .rules-btn {
+      position: absolute;
+      right: vwl(40);
+      bottom: vwl(40);
+      border: vwl(3) solid $color5;
+      border-radius: vwl(8);
+      color: $white;
+      padding: vwl(10) vwl(35);
+      font-size: vwl(18);
+    }
+
+    .rules-modal-container {
+      background-color: rgba($black, 50%);
+      .rules-modal {
+        position: relative;
+        width: vwl(400);
+        height: fit-content;
+        padding: vwl(20);
+        background-color: $white;
+        border-radius: vwl(5);
+        align-items: flex-start;
+
+        span {
+          font-size: vwl(25);
+          margin-bottom: vwl(20);
+        }
+
+        img {
+          &:first-of-type {
+            width: 100%;
+          }
+
+          &:last-of-type {
+            width: vwl(20);
+            position: absolute;
+            top: vwl(25);
+            right: vwl(20);
+          }
+        }
+      }
+    }
+  }
+}

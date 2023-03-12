@@ -1,0 +1,80 @@
+@import "../../assets/styles/variables";
+
+:host {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .choices-container {
+    background: url("../../assets/images/bg-pentagon.svg") no-repeat;
+    background-size: vws(250);
+    background-position: center;
+    width: 100%;
+    height: vws(250);
+    margin-top: vws(100);
+    margin-bottom: vws(125);
+    position: relative;
+
+    app-choice {
+      position: absolute;
+      cursor: pointer;
+
+      &:first-child {
+        top: vws(-60);
+        left: calc(50% - #{vws(50)});
+      }
+      &:nth-child(2) {
+        top: vws(60);
+        left: 0;
+      }
+      &:nth-child(3) {
+        top: vws(60);
+        right: 0;
+      }
+      &:nth-child(4) {
+        bottom: vws(-50);
+        left: vws(50);
+      }
+      &:last-child {
+        bottom: vws(-50);
+        right: vws(50);
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  :host {
+    .choices-container {
+      background-size: vwl(300) vwl(300);
+      width: vwl(300);
+      height: vwl(300);
+      margin: 0;
+
+      app-choice {
+        &:first-child {
+          top: vwl(-35);
+          left: calc(50% - #{vwl(50)});
+        }
+        &:nth-child(2) {
+          top: vwl(60);
+          left: vwl(-50);
+        }
+        &:nth-child(3) {
+          top: vwl(60);
+          right: vwl(-50);
+        }
+        &:nth-child(4) {
+          bottom: vwl(-30);
+          left: vwl(20);
+        }
+        &:last-child {
+          bottom: vwl(-30);
+          right: vwl(20);
+        }
+      }
+    }
+  }
+}

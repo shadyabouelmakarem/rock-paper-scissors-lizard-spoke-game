@@ -1,0 +1,133 @@
+@import "../../assets/styles/variables";
+
+:host {
+  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: vws(100);
+
+  .pick {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .choice-placeholder {
+      width: vws(100);
+      height: vws(100);
+      margin: vws(10);
+      margin-bottom: vws(20);
+      border-radius: 50%;
+      background-color: rgba($black, 15%);
+    }
+
+    app-choice {
+      margin-bottom: vws(30);
+      transform: scale(1.2);
+      transform-origin: top;
+
+      &.win:before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        right: -100%;
+        bottom: -100%;
+        left: -100%;
+        background-image: repeating-radial-gradient(
+          rgba($white, 0.02),
+          rgba($white, 0.05) 15%
+        );
+        border-radius: 50%;
+      }
+    }
+
+    &__label {
+      color: $white;
+      font-size: vws(20);
+      font-weight: 700;
+    }
+  }
+
+  .result {
+    .label {
+      font-size: vws(40);
+      font-weight: 700;
+      color: $white;
+      text-align: center;
+      margin-bottom: vws(20);
+    }
+
+    .play-again {
+      font-size: vws(20);
+      font-weight: 700;
+      padding: vws(10) vws(40);
+      border-radius: vws(5);
+      color: $color3;
+      background-color: $white;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  :host {
+    width: fit-content;
+    flex: 0;
+    padding-top: 0;
+
+    .pick {
+      width: vwl(400);
+      flex-direction: column-reverse;
+      padding: vwl(40);
+
+      &:nth-child(2) {
+        order: 2;
+      }
+
+      .choice-placeholder {
+        width: vwl(80);
+        height: vwl(80);
+        margin: vwl(20);
+        margin-bottom: 0;
+        border-radius: 50%;
+        transform: scale(2.5);
+        transform-origin: 50% -25%;
+      }
+
+      app-choice {
+        transform: scale(2.75);
+        margin-bottom: 0;
+      }
+
+      &__label {
+        font-size: vwl(20);
+        margin-bottom: vwl(50);
+      }
+    }
+
+    .result {
+      margin: 0 vwl(20);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-bottom: vwl(-50);
+
+      .label {
+        font-size: vwl(50);
+        margin-bottom: vwl(20);
+      }
+
+      .play-again {
+        font-size: vwl(16);
+        padding: vwl(10) vwl(40);
+        border-radius: vwl(5);
+
+        &:hover {
+          color: $color10;
+        }
+      }
+    }
+  }
+}
